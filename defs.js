@@ -56,7 +56,8 @@ module.exports = {
 		name: { type: String, lowercase: true, required: true, trim: true },
 		app: { type: String, required: true },
 		database: { type: String, required: true },
-		guests: { type: Mixed }
+		guests: { type: Mixed },
+		tenants: { type: Mixed }
 	},
 	extension : {
 		path: { type: String, required: true },
