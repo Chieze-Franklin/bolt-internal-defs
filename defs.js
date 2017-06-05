@@ -70,7 +70,8 @@ module.exports = {
 		event: { type: String, required: true },
 		publisher: { type: String, required: true },
 		route: { type: String, required: true },
-		subscriber: { type: String, required: true }
+		subscriber: { type: String, required: true },
+		type: { type: String, default: "server" }
 	},
 	role : {
 		name: { type: String, index: true, lowercase: true, required: true },
