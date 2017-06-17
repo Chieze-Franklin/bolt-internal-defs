@@ -13,12 +13,11 @@ module.exports = {
 		main: { type: String },
 		displayName: { type: String, required: true },
 
+		controlledVisibility: { type: Boolean, default: false },
 		description: { type: String },
 		dateCreated: { type: Date, default: Date.now },
 		files: { type: Object},
 		index: { type: String, default: '/' },
-		ini: { type: String, default: '/' },
-		install: { type: String, default: '/' },
 		module: { type: Boolean, default: false },
 		order: { type: Number, default: 0 },
 		package: { type: Object, required: true },
@@ -67,10 +66,11 @@ module.exports = {
 		route: { type: String, required: true }
 	},
 	hook : {
-		event: { type: String, required: true },
-		publisher: { type: String, required: true },
+		event: { type: String, lowercase: true, required: true },
+		publisher: { type: String, lowercase: true, required: true },
 		route: { type: String, required: true },
-		subscriber: { type: String, required: true },
+		subscriber: { type: String, lowercase: true, required: true },
+		transient: { type: Boolean, default: false },
 		type: { type: String, default: "server" }
 	},
 	role : {
