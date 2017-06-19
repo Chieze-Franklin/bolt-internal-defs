@@ -21,7 +21,6 @@ module.exports = {
 		module: { type: Boolean, default: false },
 		order: { type: Number, default: 0 },
 		package: { type: Object, required: true },
-		startup: { type: Boolean, default: false },
 		system: { type: Boolean, default: false },
 		tags: { type: [String]},
 		version: { type: String }
