@@ -30,11 +30,9 @@ module.exports = {
 		app_id: { type: ObjectId, required: true },
 		role: { type: String, required: true },
 		role_id: { type: ObjectId, required: true },
-		start: { type: Boolean, required: true, },
 
 		dateCreated: { type: Date, default: Date.now },
-		features: { type: [String]},
-		files: { type: [String]}
+		permissions: { type: [String], default: [] }
 	},
 	appUserAssoc : {
 		app: { type: String, required: true },
@@ -71,6 +69,13 @@ module.exports = {
 		subscriber: { type: String, lowercase: true, required: true },
 		transient: { type: Boolean, default: false },
 		type: { type: String, default: "server" }
+	},
+	permission : {
+		name: { type: String, lowercase: true, required: true, trim: true },
+		app: { type: String, required: true },
+		displayName: { type: String, required: true },
+
+		description: { type: String }
 	},
 	role : {
 		name: { type: String, index: true, lowercase: true, required: true },
