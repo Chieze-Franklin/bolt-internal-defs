@@ -13,6 +13,7 @@ module.exports = {
 		main: { type: String },
 		displayName: { type: String, required: true },
 
+		checks: { type: [String]},
 		controlledVisibility: { type: Boolean, default: false },
 		description: { type: String },
 		dateCreated: { type: Date, default: Date.now },
@@ -20,7 +21,6 @@ module.exports = {
 		index: { type: String, default: '/' },
 		module: { type: Boolean, default: false },
 		order: { type: Number, default: 0 },
-		package: { type: Object, required: true },
 		system: { type: Boolean, default: false },
 		tags: { type: [String]},
 		version: { type: String }
