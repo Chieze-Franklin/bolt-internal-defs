@@ -104,6 +104,7 @@ module.exports = {
 		isBlocked: { type: Boolean, default: false },
 		lastVisit: { type: Date, default: Date.now },
 		phone: { type: String },
+		roles: { type: [String], default: [] },
 		visits: { type: Number, default: 0 }
 	},
 	userRoleAssoc : {
